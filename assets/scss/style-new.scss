@@ -31,7 +31,8 @@
 .top-nav{
   position: -webkit-sticky;
   position: sticky;
-  top: -1px;
+  top: 0px;
+  // top: -1px;
   z-index: 999;
 }
 /* =============== */
