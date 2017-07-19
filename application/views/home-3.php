@@ -35,7 +35,8 @@
 					<div class="collapse navbar-collapse" id="navnav">
 						<ul class="nav navbar-nav">
 							<li><a href="#about_us">About Us</a></li>
-							<li><a href="#footwear">Footwear</a></li>
+							<li><a href="#products">Products</a></li>
+							<li><a href="#contacts">Contacts</a></li>
 						</ul>
 					</div>
 				</div>
@@ -67,8 +68,8 @@
 
 	<div class="row">
 		<div class="container custom">
-			<h1 id="footwear">
-				Footwear
+			<h1 id="products">
+				Products
 			</h1>
 			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 			<p>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -140,6 +141,44 @@
 		
 	</div>
 	<!-- row -->
+
+
+	<div class="row">
+		<div class="container custom">
+			<h1 class="hidden-xs">
+				Contacts
+			</h1>
+			<h1 id="contacts" class="text-center hidden-sm hidden-lg hidden-md">
+				Contacts
+			</h1>
+			<dl class="dl-horizontal">
+				<dt class="text-center">
+					<i class="fa fa-map-marker"></i>
+					Illinois
+				</dt>
+				<dd class="hidden-xs">44 Shirley Ave.</dd>
+				<dd class="hidden-xs">West Chicago, IL 60185</dd>
+				<dd class="text-center hidden-sm hidden-lg hidden-md">44 Shirley Ave.</dd>
+				<dd class="text-center hidden-sm hidden-lg hidden-md">West Chicago, IL 60185</dd>
+				<dt class="text-center">
+					<i class="fa fa-map-marker"></i>
+					Hawaii
+				</dt>
+				<dd class="hidden-xs">4 Goldfield Rd.</dd>
+				<dd class="hidden-xs">Honolulu, HI 96815</dd>
+				<dd class="text-center hidden-sm hidden-lg hidden-md">4 Goldfield Rd.</dd>
+				<dd class="text-center hidden-sm hidden-lg hidden-md">Honolulu, HI 96815</dd>
+				<dt class="text-center">
+					<i class="fa fa-map-marker"></i>
+					Florida
+				</dt>
+				<dd class="hidden-xs">123 6th St.</dd>
+				<dd class="hidden-xs">Melbourne, FL 32904</dd>
+				<dd class="text-center hidden-sm hidden-lg hidden-md">123 6th St.</dd>
+				<dd class="text-center hidden-sm hidden-lg hidden-md">Melbourne, FL 32904</dd>
+			</dl>
+		</div>
+	</div>
 	
 	<div class="row space-top-50 padding-bottom-10 bg-black">
 		<!-- FOOTER -->
