@@ -1,0 +1,180 @@
+@import "vars";
+@import "defs";
+@import "fixes";
+
+.loading-modal{
+	position: relative;
+	z-index: 999;
+	height: 10vh;
+	width: 10vh;
+	margin-top: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	color: map-get($all-colors,white);
+	font-size: 10em;
+}
+
+.loading-div{
+	position: relative;
+	z-index: 999;
+	height: 2em;
+	width: 2em;
+	margin: auto;
+}
+
+.faded{
+	opacity: 0.3;
+}
+
+/* FOR AFFIX */
+
+.top-nav{
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  z-index: 999;
+}
+/* =============== */
+
+.thumbnail > img{
+	min-height: 400px;
+	max-height: 400px;
+}
+
+.custom.container{
+	@extend .padding-top-60;
+	@extend .padding-bottom-60;
+
+	&.items{
+		@extend .padding-top-15;
+		@extend .padding-bottom-15;
+	}
+}
+
+.top-black{
+	border-top: 1px map-get($all-colors,black) solid;
+}
+ 
+.full-width{
+	width: 100%;
+}
+ 
+.full-height{
+	height: 100%;
+}
+ 
+.half-width{
+	width: 50%;
+}
+ 
+.half-height{
+	height: 50%;
+}
+
+.full-page{
+	height: 100vh;
+}
+
+.half-page{
+	height: 50vh;
+}
+
+.bottom-nav-container{
+	position: relative;
+}
+
+.bottom-nav{
+	position: absolute;
+	bottom: 0;
+}
+
+@for $i from 1 through 3 {
+
+	// XS
+	@media (max-width: 768px){
+		.bg-shoe-#{$i} {
+			content: " ";
+			height: 100vh;
+			background-image: url('../img/xs/shoe#{$i}.jpg');
+			background-attachment: fixed;
+			background-position: left;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.products-filter-btns{
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+	}
+
+	// SM
+	@media (min-width: 768px) AND (max-width: 992px){
+		.bg-shoe-#{$i} {
+			content: " ";
+			height: 100vh;
+			background-image: url('../img/sm/shoe#{$i}.jpg');
+			background-attachment: fixed;
+			background-position: left;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.products-filter-btns{
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+	}
+
+	// MD
+	@media (min-width: 992px) AND (max-width: 1200px){
+		.bg-shoe-#{$i} {
+			content: " ";
+			height: 100vh;
+			background-image: url('../img/md/shoe#{$i}.jpg');
+			background-attachment: fixed;
+			background-position: left;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+
+	// LG
+	@media (min-width: 1200px){
+		.bg-shoe-#{$i} {
+			content: " ";
+			height: 100vh;
+			background-image: url('../img/lg/shoe#{$i}.jpg');
+			background-attachment: fixed;
+			background-position: left;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+
+}
+.bg-shoe-test {
+	content: " ";
+	height: 100vh;
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/74/Museo_Liste%2C_Vigo%2C_zocas.jpg');
+	background-attachment: fixed;
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.link-icon{
+	// margin-left: -5%;
+	display: none;
+	:hover > &{
+		display: inline;
+	}
+}
+
+.font-mono{
+	font-family: Courier, Monaco, monospace;
+}
+
+.font-serif{
+	font-family: "Times New Roman", Georgia, serif;
+}

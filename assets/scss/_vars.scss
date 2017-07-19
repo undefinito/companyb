@@ -1,0 +1,38 @@
+$all-colors: 
+(
+	red: #dd3b49,
+	black: #333,
+	white: #fff,
+	gray: #d2d6de,
+	yellow: #f39c12, 
+	purple: #8E24AA,
+	green: #00A65A,
+	blue: #4B94BF,
+);
+
+// $alt-colors: ();
+// @each $_c in map-keys($all-colors) {
+// 	$alt-colors: ($_c: map-get($all-colors,$_c));
+	
+// };
+
+$alt-colors: 
+(
+	red: lighten(map-get($all-colors,red),20%),
+	black: lighten(map-get($all-colors,black),20%),
+	white: lighten(map-get($all-colors,white),20%),
+	gray: lighten(map-get($all-colors,gray),20%),
+	yellow: lighten(map-get($all-colors,yellow),20%), 
+	purple: lighten(map-get($all-colors,purple),20%),
+	green: lighten(map-get($all-colors,green),20%),
+	blue: lighten(map-get($all-colors,blue),20%),
+);
+
+$parallax: 
+(
+	perspective: 20px,
+	translateZ_back: -10px,
+	translateZ_base: 1
+);
+
+$plx_scale: 1 + (map-get($parallax,translateZ_back) * (-1)) / map-get($parallax,perspective);

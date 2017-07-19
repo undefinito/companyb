@@ -1,0 +1,152 @@
+@import "vars";
+@import "defs";
+@import "fixes";
+
+body{
+	// padding-bottom:20px;
+}
+
+.navbar-nav > li{
+	// float: left;
+}
+
+.full-width{
+	width: 100%;
+}
+
+/* PARALLAX EFFECTS */
+.parallax {
+	perspective-origin-x: 100%;
+	perspective: map-get($parallax,perspective);
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.parallax__layer {
+	transform-origin-x: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	&.parallax__layer--base {
+		transform: translateZ(2);
+		&.half{
+			height: 500px;
+		}
+	}
+	&.parallax__layer--back {
+		transform: translateZ(map-get($parallax,translateZ_back)) scale($plx_scale);
+	}
+}
+
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+/* DEBUG: PARALLAX */
+.parallax__group {
+	// transform: translate3d(700px, 0, -800px) rotateY(30deg);
+}
+
+/* ================ */
+
+.other_parallax{
+
+	/* Full height */
+	height: 100%; 
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bottom-nav-container{
+	position: relative;
+}
+
+.bottom-nav{
+	position: absolute;
+	bottom: 0;
+}
+
+@for $i from 1 through 3 {
+
+	@media (max-width: 768px){
+		.bg-shoe-#{$i} {
+			content: " ";
+			height: 100vh;
+			background-image: url('../img/xs/shoe#{$i}.jpg');
+			background-attachment: fixed;
+			background-position: left;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+
+	@media (min-width: 768px) AND (max-width: 992px){
+		.bg-shoe-#{$i} {
+			content: " ";
+			height: 100vh;
+			background-image: url('../img/sm/shoe#{$i}.jpg');
+			background-attachment: fixed;
+			background-position: left;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+
+	@media (min-width: 992px) AND (max-width: 1200px){
+		.bg-shoe-#{$i} {
+			content: " ";
+			height: 100vh;
+			background-image: url('../img/md/shoe#{$i}.jpg');
+			background-attachment: fixed;
+			background-position: left;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+
+	@media (min-width: 1200px){
+		.bg-shoe-#{$i} {
+			content: " ";
+			height: 100vh;
+			background-image: url('../img/lg/shoe#{$i}.jpg');
+			background-attachment: fixed;
+			background-position: left;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+
+}
+.bg-shoe-test {
+	content: " ";
+	height: 100vh;
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/74/Museo_Liste%2C_Vigo%2C_zocas.jpg');
+	background-attachment: fixed;
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.link-icon{
+	opacity: 0;
+	*:hover > &{
+		opacity: 1;
+	}
+}
+
+.font-mono{
+	font-family: Courier, Monaco, monospace;
+}
+
+.font-serif{
+	font-family: "Times New Roman", Georgia, serif;
+}

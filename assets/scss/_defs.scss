@@ -1,0 +1,115 @@
+/* MISC */
+.clickable{
+	cursor: pointer;
+}
+
+.pointy{
+	border-radius: 0;
+}
+/* ----------------------------- */
+
+/* TYPOGRAPHY */
+
+.bold{
+	font-weight: 700;
+}
+
+/* FONT */
+@for $i from 1 through 50 {
+	.font-px-#{$i}{
+		font-size: $i+px;
+	}
+
+	.font-em-#{$i}{
+		font-size: $i+em;
+	}
+}
+
+
+/* ----------------------------- */
+
+/* BACKGROUND COLORS */
+@each $a in map-keys($all-colors)
+{
+	/* #{$a} */
+	.bg-#{$a}
+	{
+		background-color: map-get($all-colors,$a);
+	}
+}
+/* ALT COLORS */
+@each $a in map-keys($all-colors)
+{
+	/* #{$a} */
+	.bg-alt-#{$a}
+	{
+		background-color: map-get($alt-colors,$a);
+	}
+}
+
+.bg-none{
+	background-color: transparent;
+}
+
+/* TEXT COLORS */
+@each $a in map-keys($all-colors)
+{
+	@if $a == white or $a == purple
+	{
+		/* #{$a} */
+		.text-#{$a}
+		{
+			color: map-get($all-colors,$a);
+		}
+	}
+
+	.hover-#{$a}:hover{
+		color: map-get($all-colors,$a);
+	}
+}
+/* ALT COLORS */
+@each $a in map-keys($alt-colors)
+{
+	/* #{$a} */
+	.text-alt-#{$a}
+	{
+		color: map-get($alt-colors,$a);
+	}
+
+	.hover-alt-#{$a}:hover{
+		color: map-get($alt-colors,$a);
+	}
+}
+
+/* ------------------ */
+
+/* SPACING (MARGIN) & PADDING (duh) */
+
+@each $dir in (top,bottom,left,right)
+{
+	@for $i from 1 through 100 {
+		.space-#{$dir}-#{$i} {
+			margin-#{$dir}: $i+px;
+		}
+	}
+	@for $i from 1 through 100 {
+		.padding-#{$dir}-#{$i} {
+			padding-#{$dir}: $i+px;
+		}
+	}
+
+	.space-#{$dir}-none{
+		margin-#{$dir}: 0;
+	}
+
+	.padding-#{$dir}-none{
+		padding-#{$dir}: 0;
+	}
+}
+/* ----------------------------- */
+
+.bottom-copy{
+	position: fixed;
+	right: 10px;
+	bottom: 12px;
+}
